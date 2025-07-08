@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>JAR包深度比对报告</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; line-height: 1.6; color: #333; background-color: #f8f9fa; margin: 0; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 30px; }
+        h1, h2, h3 { color: #2c3e50; border-bottom: 2px solid #e9ecef; padding-bottom: 10px; }
+        h1 { text-align: center; }
+        .summary, .jar-details { margin-bottom: 30px; border: 1px solid #dee2e6; border-radius: 5px; padding: 20px; }
+        .summary p { margin: 5px 0; }
+        .jar-header { background-color: #f1f3f5; padding: 10px 15px; border-radius: 5px 5px 0 0; font-weight: bold; }
+        .class-header { font-weight: bold; margin-top: 20px; color: #34495e; }
+        pre { white-space: pre-wrap; word-wrap: break-word; background-color: #f8f9fa; border: 1px solid #ced4da; border-radius: 4px; padding: 15px; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 14px; }
+        .line-num { display: inline-block; width: 40px; color: #868e96; text-align: right; padding-right: 10px; border-right: 1px solid #dee2e6; user-select: none; }
+        /* 差异高亮样式 */
+        .diff-line { display: flex; }
+        .diff-op { width: 20px; text-align: center; font-weight: bold; user-select: none; }
+        .diff-content { flex-grow: 1; padding-left: 10px; }
+        .diff-insert { background-color: #e6ffed; }
+        .diff-delete { background-color: #ffeef0; }
+        .diff-insert .diff-op { color: #28a745; }
+        .diff-delete .diff-op { color: #dc3545; }
+        /* 行内单词高亮 */
+        .highlight-insert { background-color: #45EA85; padding: 1px 2px; border-radius: 3px; }
+        .highlight-delete { background-color: #FB504B; color: #fff; padding: 1px 2px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>${reportTitle}</h1>
+    <div class="report-meta">
+        <p><strong>报告生成时间:</strong> ${reportTime}</p>
+        <p><strong>旧版本目录 (v1):</strong> ${oldDir}</p>
+        <p><strong>新版本目录 (v2):</strong> ${newDir}</p>
+    </div>
+
+    <div class="summary">
+        <h2>摘要信息</h2>
+        ${summaryContent}
+    </div>
+
+    <div class="details-section">
+        <h2>详细内容</h2>
+        ${detailedContent}
+    </div>
+</div>
+</body>
+</html>
