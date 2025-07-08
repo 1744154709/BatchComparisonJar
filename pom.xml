@@ -33,22 +33,15 @@
         <dependency>
             <groupId>io.github.java-diff-utils</groupId>
             <artifactId>java-diff-utils</artifactId>
-            <version>4.12</version> <!-- 建议使用最新版本 -->
+            <version>4.12</version>
         </dependency>
 
-        <!-- 可选: Google的差异比对库 -->
-<!--        <dependency>-->
-<!--            <groupId>org.bitbucket.b_c</groupId>-->
-<!--            <artifactId>jose4j</artifactId>-->
-<!--            <version>0.9.3</version> &lt;!&ndash; diff-match-patch 可能需要通过其他方式引入，或者直接拷贝源码 &ndash;&gt;-->
-<!--        </dependency>-->
         <!-- 这个库专门用于提供强大的文本差异比对功能 -->
         <dependency>
             <groupId>org.bitbucket.cowwoc</groupId>
             <artifactId>diff-match-patch</artifactId>
-            <version>1.2</version> <!-- 推荐使用一个较新的稳定版本 -->
+            <version>1.2</version>
         </dependency>
-        <!-- 可选: 用于更丰富的字符串操作 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-text</artifactId>
